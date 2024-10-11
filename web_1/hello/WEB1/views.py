@@ -24,7 +24,7 @@ def edit(request, id):
             person.save()
             return HttpResponseRedirect("/")
         else:
-            return render(request, "edit.html", {"person": person})
+            return render(request, "WEB1/edit.html", {"person": person})
     except Person.DoesNotExist:
         return HttpResponseNotFound("<h2>Клиент не найден</h2>")
 
