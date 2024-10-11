@@ -18,9 +18,9 @@ from django.urls import path
 from django.urls import path
 from WEB1 import views
 from django.views.generic import TemplateView
+from django.urls import path
+from WEB1 import views
 urlpatterns = [
-path('', views.index),
-path('about/', TemplateView.as_view(template_name="WEB1/about.html")),
-path('contact/', TemplateView.as_view(template_name="WEB1/contact.html",
-extra_context={"work": "Разработка программных продуктов"})),
+ path('', views.index),
+ path('create/', views.create),
 ]
